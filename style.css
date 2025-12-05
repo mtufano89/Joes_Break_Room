@@ -1,0 +1,503 @@
+/* ------------------ ROOT VARIABLES ------------------ */
+:root {
+  --purple-deep: #1a0033;
+  --purple-deeper: #130024;
+  --bg-body: #faf7ff;
+  --bg-hero: #fff7ff;
+  --accent-pink: #ff4fa8;
+  --accent-teal: #31d4d4;
+  --accent-yellow: #ffd74a;
+  --text-main: #1a1a1a;
+  --text-muted: #555555;
+  --max-width: 1120px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+  --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.16);
+}
+
+/* ------------------ GLOBAL RESET ------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: radial-gradient(circle at top left, #ffeef9 0, #faf7ff 40%, #f5fffb 100%);
+  color: var(--text-main);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* ------------------ NAVBAR ------------------ */
+
+.site-header {
+  background: linear-gradient(90deg, var(--purple-deeper), var(--purple-deep));
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
+}
+
+.nav-container {
+  max-width: 1250px;         /* brings everything inward */
+  margin: 0 auto;
+  padding: 0.35rem 2.2rem;   /* more spacing on sides */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
+
+.brand-logo {
+  height: 68px;              /* still nice and large */
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  opacity: 0.9;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  opacity: 1;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent-teal), var(--accent-pink));
+  transition: width 0.18s ease-out;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ------------------ NAV CTA BUTTON ------------------ */
+
+.nav-cta {
+  background: linear-gradient(135deg, var(--accent-pink), var(--accent-yellow));
+  color: var(--purple-deep);
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+  transition: 0.15s ease-out;
+}
+
+.nav-cta:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.28);
+}
+
+
+/* ------------------ HERO SECTION ------------------ */
+
+.hero {
+  padding: 0;  /* remove internal padding so image fills edge-to-edge */
+}
+
+.hero-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4.5rem 3rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+
+  /* NEW: Apply hero image here */
+  background: 
+    linear-gradient(to bottom, rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+    url("images/hero_image.png") center/cover no-repeat;
+
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.1fr);
+  gap: 2.6rem;
+}
+
+
+/* subtle 90s shapes in the background */
+.hero-inner::before,
+.hero-inner::after {
+  content: "";
+  position: absolute;
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+.hero-inner::before {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent-pink), transparent 65%);
+  top: -70px;
+  right: -40px;
+}
+
+.hero-inner::after {
+  width: 190px;
+  height: 190px;
+  background:
+    linear-gradient(135deg, var(--accent-teal), transparent 60%),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.4) 0,
+      rgba(255, 255, 255, 0.4) 2px,
+      transparent 2px,
+      transparent 6px
+    );
+  border-radius: 28px;
+  bottom: -60px;
+  left: -40px;
+}
+
+/* ----- HERO COPY ----- */
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-kicker {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent-teal);
+  margin-bottom: 0.75rem;
+}
+
+.hero-title {
+  font-size: clamp(2.2rem, 3vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+  color: var(--purple-deeper);
+}
+
+.hero-subtitle {
+  font-size: 0.98rem;
+  color: var(--text-muted);
+  margin-bottom: 1.8rem;
+  max-width: 460px;
+}
+
+.hero-subtitle span {
+  color: var(--accent-pink);
+  font-weight: 600;
+}
+
+/* Hero actions */
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.4rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out, filter 0.12s ease-out;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-pink), var(--accent-yellow));
+  color: var(--purple-deep);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.22);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.btn-link {
+  font-size: 0.9rem;
+  color: var(--accent-teal);
+  font-weight: 500;
+}
+
+/* ----- HERO SHOWCASE (FEATURE CARDS) ----- */
+
+.hero-showcase {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.card-feature {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  padding: 0.9rem 0.9rem 1rem;
+}
+
+.card-feature-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.card-image-placeholder {
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ffe0f3, #e4fff9);
+  padding: 0.45rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image-placeholder img {
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.card-info {
+  padding: 0.35rem 0.25rem;
+}
+
+.card-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent-teal);
+  margin-bottom: 0.3rem;
+}
+
+.card-name {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--purple-deeper);
+}
+
+.card-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.card-feature.small {
+  padding: 0.7rem;
+}
+
+.small-name {
+  font-size: 0.78rem;
+  margin-top: 0.45rem;
+}
+
+/* Make hero a positioning context */
+.hero {
+  position: relative;
+  padding: 3.5rem 1.5rem 4.5rem; /* keep what you like here */
+  overflow: hidden; /* hides shapes that float too far out */
+}
+
+/* Background shapes container */
+.hero-bg-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0; /* behind hero-inner */
+}
+
+/* Base shape style */
+.hero-bg-shapes .shape {
+  position: absolute;
+  opacity: 0.4;
+  filter: blur(0.2px);
+  mix-blend-mode: normal;
+}
+
+/* Individual shapes (90s triangles, blobs, zig-zags-ish) */
+.shape-1 {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #ffb6e1, #ffeaa7);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  top: 12%;
+  left: 6%;
+  animation: float-1 14s ease-in-out infinite;
+}
+
+.shape-2 {
+  width: 160px;
+  height: 40px;
+  background: repeating-linear-gradient(
+    90deg,
+    #b3fff3 0,
+    #b3fff3 8px,
+    transparent 8px,
+    transparent 16px
+  );
+  border-radius: 999px;
+  top: 70%;
+  left: 10%;
+  transform: rotate(-12deg);
+  opacity: 0.3;
+  animation: float-2 18s ease-in-out infinite;
+}
+
+.shape-3 {
+  width: 140px;
+  height: 140px;
+  border-radius: 32px;
+  background: linear-gradient(135deg, #d0c3ff, #faffc9);
+  top: 18%;
+  right: 4%;
+  animation: float-3 16s ease-in-out infinite;
+}
+
+.shape-4 {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 4px solid #ff4fa8;
+  border-top-color: transparent;
+  border-left-color: #31d4d4;
+  top: 78%;
+  right: 12%;
+  opacity: 0.45;
+  animation: float-4 20s linear infinite;
+}
+
+/* Float animations */
+
+@keyframes float-1 {
+  0%   { transform: translateY(0) translateX(0) rotate(0deg); }
+  50%  { transform: translateY(-18px) translateX(10px) rotate(4deg); }
+  100% { transform: translateY(0) translateX(0) rotate(0deg); }
+}
+
+@keyframes float-2 {
+  0%   { transform: translateY(0) translateX(0) rotate(-12deg); }
+  50%  { transform: translateY(-10px) translateX(16px) rotate(-6deg); }
+  100% { transform: translateY(0) translateX(0) rotate(-12deg); }
+}
+
+@keyframes float-3 {
+  0%   { transform: translateY(0) translateX(0) rotate(0deg); }
+  50%  { transform: translateY(20px) translateX(-14px) rotate(-3deg); }
+  100% { transform: translateY(0) translateX(0) rotate(0deg); }
+}
+
+@keyframes float-4 {
+  0%   { transform: translateY(0) translateX(0) rotate(0deg); }
+  50%  { transform: translateY(-12px) translateX(-10px) rotate(180deg); }
+  100% { transform: translateY(0) translateX(0) rotate(360deg); }
+}
+
+/* Ensure hero-inner stays on top of shapes */
+.hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ------------------ FOOTER ------------------ */
+
+.site-footer {
+  text-align: center;
+  padding: 1.5rem 1rem 2rem;
+  font-size: 0.82rem;
+  color: #777777;
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    padding: 2.6rem 2.1rem;
+  }
+
+  .hero-showcase {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .brand-logo {
+    height: 68px;
+  }
+
+  .hero {
+    padding-inline: 1.1rem;
+  }
+
+  .hero-inner {
+    padding: 2.3rem 1.6rem;
+    border-radius: 18px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-logo {
+    height: 60px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.92rem;
+  }
+}
