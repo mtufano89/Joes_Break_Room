@@ -1005,3 +1005,11 @@ a {
   filter: brightness(1.05);
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
 }
+.hero {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #fdf7ff 40%,
+    #f4fbff 100%
+  );
+}
