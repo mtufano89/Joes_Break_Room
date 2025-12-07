@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Joe's Break Room | Pokémon Card Shop</title>
+  <title>Joe's Break Room | Card Shop</title>
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -14,14 +14,12 @@
 <body>
 
   <!-- NAVBAR -->
-  <header class="site-header">
+ <header class="site-header">
   <div class="nav-container">
+    <!-- Subtle brand text -->
+    <a href="index.html" class="brand-text">Joe’s Break Room</a>
 
-    <a href="index.html" class="brand">
-      <img src="images/joe_logo_2.png" alt="Joe's Break Room Logo" class="brand-logo">
-    </a>
-
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Main navigation">
       <a href="#" class="nav-link active">Home</a>
       <a href="#" class="nav-link">Shop</a>
       <a href="#" class="nav-link">About</a>
@@ -29,78 +27,66 @@
     </nav>
 
     <a href="#" class="nav-cta">Shop Now</a>
-
   </div>
 </header>
 
 
- <!-- HERO SECTION -->
-<section class="hero">
-  <!-- 90s animated background shapes -->
-  <div class="hero-bg-shapes" aria-hidden="true">
-    <span class="shape shape-1"></span>
-    <span class="shape shape-2"></span>
-    <span class="shape shape-3"></span>
-    <span class="shape shape-4"></span>
-  </div>
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
 
-  <div class="hero-inner">
+        <!-- LEFT: TEXT -->
+        <div class="hero-left">
+<img src="images/joe_logo_transparent.png" alt="Joe's Break Room Logo" class="hero-logo" />
 
-    <!-- LEFT: TEXT -->
-    <div class="hero-copy">
-      <p class="hero-kicker">Joe’s Break Room</p>
+          <h1 class="hero-title">
+            Card hunting,<br />without the hassle.
+          </h1>
 
-      <h1 class="hero-title">
-        Card hunting, without the hassle.
-      </h1>
+          <p class="hero-subtitle">
+            Hand-picked rare and graded Pokémon and sports cards, curated by us so you can
+            <span>skip the bulk</span> and go straight to the good stuff.
+          </p>
 
-      <p class="hero-subtitle">
-        Hand-picked rare and graded Pokémon and sports cards,
-        curated by us so you can <span>skip the bulk</span> and go straight to
-        the good stuff.
-      </p>
-
-      <div class="hero-actions">
-        <a href="#" class="btn btn-primary">Shop Now</a>
-        <a href="#" class="btn-link">Browse all cards →</a>
-      </div>
-    </div>
-
-    <!-- RIGHT: FEATURED IMAGES -->
-    <div class="hero-showcase" aria-label="Featured cards preview">
-      <div class="card-feature card-feature-main">
-        <div class="card-image-placeholder">
-          <img src="images/charizard.jpg" alt="Featured Pokémon card 1">
-        </div>
-        <div class="card-info">
-          <p class="card-label">Featured Hit</p>
-          <p class="card-name">Graded Charizard V</p>
-        </div>
-      </div>
-
-      <div class="card-feature-grid">
-        <div class="card-feature small">
-          <div class="card-image-placeholder">
-            <img src="images/drake_Maye.jpg" alt="Featured Pokémon card 2">
+          <div class="hero-actions">
+            <a href="#" class="btn btn-primary">Shop Now</a>
+            <a href="#" class="btn-link">Browse all cards →</a>
           </div>
-          <p class="card-name small-name">Alt-Art Favorite</p>
         </div>
 
-        <div class="card-feature small">
-          <div class="card-image-placeholder">
-            <img src="images/pikachu.jpg" alt="Featured Pokémon card 3">
+        <!-- RIGHT: FEATURED SHOWCASE -->
+        <div class="hero-right">
+          <h2 class="showcase-title">Featured Showcase</h2>
+
+          <div class="showcase-cards">
+            <div class="showcase-card">
+              <img src="images/charizard.jpg" alt="Graded Charizard" />
+              <p class="card-label">Featured Hit</p>
+              <p class="card-name">1999 Charizard – PSA 10</p>
+            </div>
+
+            <div class="showcase-card">
+              <img src="images/drake_maye.jpg" alt="Drake Maye card" />
+              <p class="card-label">Alt-Art Favorite</p>
+              <p class="card-name">Drake Maye – Gem Mint</p>
+            </div>
+
+            <div class="showcase-card">
+              <img src="images/pikachu.jpg" alt="Pikachu graded card" />
+              <p class="card-label">Graded Gem</p>
+              <p class="card-name">Pikachu – Graded 9</p>
+            </div>
           </div>
-          <p class="card-name small-name">Graded Gem</p>
         </div>
-      </div>
-    </div>
 
-  </div> <!-- end .hero-inner -->
-</section>
+      </div>
+    </section>
+  </main>
 
   <!-- FOOTER -->
   <footer class="site-footer">
-    <p>© <span id="year"></span> Joe’s Break Room. All rights reserved.</p>
+    © <span id="year"></span> Joe’s Break Room. All rights reserved.
   </footer>
 
   <script>
