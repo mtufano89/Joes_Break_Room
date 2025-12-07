@@ -40,17 +40,23 @@
         </p>
 
         <div class="shop-tags">
-          <button class="tag-pill tag-active">All cards</button>
-          <button class="tag-pill">Pokémon</button>
-          <button class="tag-pill">Sports</button>
-          <button class="tag-pill">Charizard</button>
-          <button class="tag-pill">Under $200</button>
-        </div>
+  <button class="tag-pill tag-active" data-filter="all">All cards</button>
+  <button class="tag-pill" data-filter="pokemon">Pokémon</button>
+  <button class="tag-pill" data-filter="sports">Sports</button>
+  <button class="tag-pill" data-filter="charizard">Charizard</button>
+  <button class="tag-pill" data-filter="under-200">Under $200</button>
+</div>
+
 
         <div class="shop-controls">
-          <div class="shop-search">
-            <input type="text" placeholder="Search by name, set, or grade…" aria-label="Search cards" />
-          </div>
+         <div class="shop-search">
+  <input
+    type="text"
+    id="cardSearch"
+    placeholder="Search by name, set, or grade…"
+    aria-label="Search cards" />
+</div>
+
 
           <div class="shop-sort">
             <label for="sort">Sort by</label>
@@ -69,185 +75,338 @@
     <section class="shop-grid-section">
       <div class="shop-grid">
 
-        <!-- PRODUCT 1 -->
-        <article class="product-card">
-          <div class="product-image-wrap">
-            <img src="images/charizard.jpg" alt="1999 Charizard PSA 10" />
-          </div>
-          <p class="product-tag">Pokémon · Featured Hit</p>
-          <h2 class="product-name">1999 Charizard – PSA 10</h2>
-          <p class="product-meta">Base Set · Holo · Fire-type icon</p>
-          <div class="product-bottom">
-            <span class="product-price">$8,500</span>
-            <button class="product-btn">View details</button>
-          </div>
-        </article>
+     
 
-        <!-- PRODUCT 2 -->
-        <article class="product-card">
-          <div class="product-image-wrap">
-            <img src="images/pikachu.jpg" alt="Pikachu graded 9" />
-          </div>
-          <p class="product-tag">Pokémon · Graded Gem</p>
-          <h2 class="product-name">Pikachu – Graded 9</h2>
-          <p class="product-meta">Modern · Fan favorite · Electric</p>
-          <div class="product-bottom">
-            <span class="product-price">$140</span>
-            <button class="product-btn">View details</button>
-          </div>
-        </article>
-
-        <!-- PRODUCT 3 -->
-        <article class="product-card">
-          <div class="product-image-wrap">
-            <img src="images/drake_maye.jpg" alt="Drake Maye Gem Mint" />
-          </div>
-          <p class="product-tag">Sports · Alt-Art</p>
-          <h2 class="product-name">Drake Maye – Gem Mint</h2>
-          <p class="product-meta">Rookie QB · Mosaic Stained Glass</p>
-          <div class="product-bottom">
-            <span class="product-price">$220</span>
-            <button class="product-btn">View details</button>
-          </div>
-        </article>
-
-        <!-- PRODUCT 4 (placeholder using one of the images again) -->
-        <article class="product-card">
-          <div class="product-image-wrap">
-            <img src="images/charizard.jpg" alt="Charizard PSA 9" />
-          </div>
-          <p class="product-tag">Pokémon</p>
-          <h2 class="product-name">Charizard – PSA 9</h2>
-          <p class="product-meta">Vintage foil · Great centering</p>
-          <div class="product-bottom">
-            <span class="product-price">$3,200</span>
-            <button class="product-btn">View details</button>
-          </div>
-        </article>
-
-        <!-- PRODUCT 5 -->
-        <article class="product-card">
-          <div class="product-image-wrap">
-            <img src="images/pikachu.jpg" alt="Pikachu EX" />
-          </div>
-          <p class="product-tag">Pokémon · Cute Hit</p>
-          <h2 class="product-name">Pikachu EX – CGC 9.5</h2>
-          <p class="product-meta">Full art · Lightning holo</p>
-          <div class="product-bottom">
-            <span class="product-price">$95</span>
-            <button class="product-btn">View details</button>
-          </div>
-        </article>
-
-        <!-- PRODUCT 6 -->
-        <article class="product-card">
-          <div class="product-image-wrap">
-            <img src="images/drake_maye.jpg" alt="Drake Maye silver rookie" />
-          </div>
-          <p class="product-tag">Sports · QB</p>
-          <h2 class="product-name">Drake Maye – Silver Rookie</h2>
-          <p class="product-meta">Prizm · Short print</p>
-          <div class="product-bottom">
-            <span class="product-price">$180</span>
-            <button class="product-btn">View details</button>
-          </div>
-        </article>
-
-          <!-- PRODUCT 7 -->
-        <article class="product-card">
-          <div class="product-image-wrap">
-            <img src="images/drake_maye.jpg" alt="Drake Maye silver rookie" />
-          </div>
-          <p class="product-tag">Sports · QB</p>
-          <h2 class="product-name">Drake Maye – Silver Rookie</h2>
-          <p class="product-meta">Prizm · Short print</p>
-          <div class="product-bottom">
-            <span class="product-price">$180</span>
-            <button class="product-btn">View details</button>
-          </div>
-        </article>
-
-         <!-- PRODUCT 8 -->
-        <article class="product-card">
-          <div class="product-image-wrap">
-            <img src="images/charizard.jpg" alt="1999 Charizard PSA 10" />
-          </div>
-          <p class="product-tag">Pokémon · Featured Hit</p>
-          <h2 class="product-name">1999 Charizard – PSA 10</h2>
-          <p class="product-meta">Base Set · Holo · Fire-type icon</p>
-          <div class="product-bottom">
-            <span class="product-price">$8,500</span>
-            <button class="product-btn">View details</button>
-          </div>
-        </article>
-
-        <!-- PRODUCT 9 -->
-        <article class="product-card">
-          <div class="product-image-wrap">
-            <img src="images/pikachu.jpg" alt="Pikachu graded 9" />
-          </div>
-          <p class="product-tag">Pokémon · Graded Gem</p>
-          <h2 class="product-name">Pikachu – Graded 9</h2>
-          <p class="product-meta">Modern · Fan favorite · Electric</p>
-          <div class="product-bottom">
-            <span class="product-price">$140</span>
-            <button class="product-btn">View details</button>
-          </div>
-        </article>
-
-        <!-- PRODUCT 10 -->
-        <article class="product-card">
-          <div class="product-image-wrap">
-            <img src="images/drake_maye.jpg" alt="Drake Maye Gem Mint" />
-          </div>
-          <p class="product-tag">Sports · Alt-Art</p>
-          <h2 class="product-name">Drake Maye – Gem Mint</h2>
-          <p class="product-meta">Rookie QB · Mosaic Stained Glass</p>
-          <div class="product-bottom">
-            <span class="product-price">$220</span>
-            <button class="product-btn">View details</button>
-          </div>
-        </article>
-
-        <!-- PRODUCT 11 (placeholder using one of the images again) -->
-        <article class="product-card">
-          <div class="product-image-wrap">
-            <img src="images/charizard.jpg" alt="Charizard PSA 9" />
-          </div>
-          <p class="product-tag">Pokémon</p>
-          <h2 class="product-name">Charizard – PSA 9</h2>
-          <p class="product-meta">Vintage foil · Great centering</p>
-          <div class="product-bottom">
-            <span class="product-price">$3,200</span>
-            <button class="product-btn">View details</button>
-          </div>
-        </article>
-
-        <!-- PRODUCT 12 -->
-        <article class="product-card">
-          <div class="product-image-wrap">
-            <img src="images/pikachu.jpg" alt="Pikachu EX" />
-          </div>
-          <p class="product-tag">Pokémon · Cute Hit</p>
-          <h2 class="product-name">Pikachu EX – CGC 9.5</h2>
-          <p class="product-meta">Full art · Lightning holo</p>
-          <div class="product-bottom">
-            <span class="product-price">$95</span>
-            <button class="product-btn">View details</button>
-          </div>
-        </article>
-
+    <!-- PRODUCT 1 -->
+    <article class="product-card"
+      data-name="1999 Charizard PSA 10"
+      data-tags="pokemon charizard base set holo fire psa 10"
+      data-price="8500"
+      data-category="Pokémon">
+      <div class="product-image-wrap">
+        <img src="images/charizard.jpg" alt="1999 Chariard PSA 10" />
       </div>
-    </section>
-  </main>
+      <p class="product-tag">Pokémon · Featured Hit</p>
+      <h2 class="product-name">1999 Charizard – PSA 10</h2>
+      <p class="product-meta">Base Set · Holo · Fire-type icon</p>
+      <div class="product-bottom">
+        <span class="product-price">$8,500</span>
+        <button class="product-btn">View details</button>
+      </div>
+    </article>
+
+    <!-- PRODUCT 2 -->
+    <article class="product-card"
+      data-name="Pikachu Graded 9"
+      data-tags="pokemon pikachu modern graded 9 electric"
+      data-price="140"
+       data-category="Pokémon">
+      <div class="product-image-wrap">
+        <img src="images/pikachu.jpg" alt="Pikachu graded 9" />
+      </div>
+      <p class="product-tag">Pokémon · Graded Gem</p>
+      <h2 class="product-name">Pikachu – Graded 9</h2>
+      <p class="product-meta">Modern · Fan favorite · Electric</p>
+      <div class="product-bottom">
+        <span class="product-price">$140</span>
+        <button class="product-btn">View details</button>
+      </div>
+    </article>
+
+    <!-- PRODUCT 3 -->
+    <article class="product-card"
+      data-name="Drake Maye Gem Mint"
+      data-tags="sports football drake maye gem mint mosaic stained glass rookie"
+      data-price="220"
+       data-category="Sports">
+      <div class="product-image-wrap">
+        <img src="images/drake_maye.jpg" alt="Drake Maye Gem Mint" />
+      </div>
+      <p class="product-tag">Sports · Alt-Art</p>
+      <h2 class="product-name">Drake Maye – Gem Mint</h2>
+      <p class="product-meta">Rookie QB · Mosaic Stained Glass</p>
+      <div class="product-bottom">
+        <span class="product-price">$220</span>
+        <button class="product-btn">View details</button>
+      </div>
+    </article>
+
+    <!-- PRODUCT 4 -->
+    <article class="product-card"
+      data-name="Charizard PSA 9"
+      data-tags="pokemon charizard vintage foil psa 9"
+      data-price="3200"
+       data-category="Pokémon">
+      <div class="product-image-wrap">
+        <img src="images/charizard.jpg" alt="Charizard PSA 9" />
+      </div>
+      <p class="product-tag">Pokémon</p>
+      <h2 class="product-name">Charizard – PSA 9</h2>
+      <p class="product-meta">Vintage foil · Great centering</p>
+      <div class="product-bottom">
+        <span class="product-price">$3,200</span>
+        <button class="product-btn">View details</button>
+      </div>
+    </article>
+
+    <!-- PRODUCT 5 -->
+    <article class="product-card"
+      data-name="Pikachu EX CGC 9.5"
+      data-tags="pokemon pikachu ex cgc 9.5 full art lightning"
+      data-price="95"
+       data-category="Pokémon">
+      <div class="product-image-wrap">
+        <img src="images/pikachu.jpg" alt="Pikachu EX" />
+      </div>
+      <p class="product-tag">Pokémon · Cute Hit</p>
+      <h2 class="product-name">Pikachu EX – CGC 9.5</h2>
+      <p class="product-meta">Full art · Lightning holo</p>
+      <div class="product-bottom">
+        <span class="product-price">$95</span>
+        <button class="product-btn">View details</button>
+      </div>
+    </article>
+
+    <!-- PRODUCT 6 -->
+    <article class="product-card"
+      data-name="Drake Maye Silver Rookie"
+      data-tags="sports football drake maye silver rookie prizm"
+      data-price="180"
+       data-category="Sports">
+      <div class="product-image-wrap">
+        <img src="images/drake_maye.jpg" alt="Drake Maye silver rookie" />
+      </div>
+      <p class="product-tag">Sports · QB</p>
+      <h2 class="product-name">Drake Maye – Silver Rookie</h2>
+      <p class="product-meta">Prizm · Short print</p>
+      <div class="product-bottom">
+        <span class="product-price">$180</span>
+        <button class="product-btn">View details</button>
+      </div>
+    </article>
+
+    <!-- PRODUCT 7 -->
+    <article class="product-card"
+      data-name="Drake Maye Silver Rookie"
+      data-tags="sports football drake maye silver rookie prizm"
+      data-price="180"
+       data-category="Pokémon">
+      <div class="product-image-wrap">
+        <img src="images/drake_maye.jpg" alt="Drake Maye silver rookie" />
+      </div>
+      <p class="product-tag">Sports · QB</p>
+      <h2 class="product-name">Drake Maye – Silver Rookie</h2>
+      <p class="product-meta">Prizm · Short print</p>
+      <div class="product-bottom">
+        <span class="product-price">$180</span>
+        <button class="product-btn">View details</button>
+      </div>
+    </article>
+
+    <!-- PRODUCT 8 -->
+    <article class="product-card"
+      data-name="1999 Charizard PSA 10"
+      data-tags="pokemon charizard base set holo fire psa 10"
+      data-price="8500"
+       data-category="Pokémon">
+      <div class="product-image-wrap">
+        <img src="images/charizard.jpg" alt="1999 Charizard PSA 10" />
+      </div>
+      <p class="product-tag">Pokémon · Featured Hit</p>
+      <h2 class="product-name">1999 Charizard – PSA 10</h2>
+      <p class="product-meta">Base Set · Holo · Fire-type icon</p>
+      <div class="product-bottom">
+        <span class="product-price">$8,500</span>
+        <button class="product-btn">View details</button>
+      </div>
+    </article>
+
+    <!-- PRODUCT 9 -->
+    <article class="product-card"
+      data-name="Pikachu Graded 9"
+      data-tags="pokemon pikachu modern graded 9 electric"
+      data-price="140"
+       data-category="Pokémon">
+      <div class="product-image-wrap">
+        <img src="images/pikachu.jpg" alt="Pikachu graded 9" />
+      </div>
+      <p class="product-tag">Pokémon · Graded Gem</p>
+      <h2 class="product-name">Pikachu – Graded 9</h2>
+      <p class="product-meta">Modern · Fan favorite · Electric</p>
+      <div class="product-bottom">
+        <span class="product-price">$140</span>
+        <button class="product-btn">View details</button>
+      </div>
+    </article>
+
+    <!-- PRODUCT 10 -->
+    <article class="product-card"
+      data-name="Drake Maye Gem Mint"
+      data-tags="sports football drake maye gem mint mosaic stained glass rookie"
+      data-price="220"
+       data-category="Sports">
+      <div class="product-image-wrap">
+        <img src="images/drake_maye.jpg" alt="Drake Maye Gem Mint" />
+      </div>
+      <p class="product-tag">Sports · Alt-Art</p>
+      <h2 class="product-name">Drake Maye – Gem Mint</h2>
+      <p class="product-meta">Rookie QB · Mosaic Stained Glass</p>
+      <div class="product-bottom">
+        <span class="product-price">$220</span>
+        <button class="product-btn">View details</button>
+      </div>
+    </article>
+
+    <!-- PRODUCT 11 -->
+    <article class="product-card"
+      data-name="Charizard PSA 9"
+      data-tags="pokemon charizard vintage foil psa 9"
+      data-price="3200"
+       data-category="Pokémon">
+      <div class="product-image-wrap">
+        <img src="images/charizard.jpg" alt="Charizard PSA 9" />
+      </div>
+      <p class="product-tag">Pokémon</p>
+      <h2 class="product-name">Charizard – PSA 9</h2>
+      <p class="product-meta">Vintage foil · Great centering</p>
+      <div class="product-bottom">
+        <span class="product-price">$3,200</span>
+        <button class="product-btn">View details</button>
+      </div>
+    </article>
+
+    <!-- PRODUCT 12 -->
+    <article class="product-card"
+      data-name="Pikachu EX CGC 9.5"
+      data-tags="pokemon pikachu ex cgc 9.5 full art lightning"
+      data-price="95"
+       data-category="Pokémon">
+      <div class="product-image-wrap">
+        <img src="images/pikachu.jpg" alt="Pikachu EX" />
+      </div>
+      <p class="product-tag">Pokémon · Cute Hit</p>
+      <h2 class="product-name">Pikachu EX – CGC 9.5</h2>
+      <p class="product-meta">Full art · Lightning holo</p>
+      <div class="product-bottom">
+        <span class="product-price">$95</span>
+        <button class="product-btn">View details</button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
 
   <!-- FOOTER -->
   <footer class="site-footer">
     © <span id="year"></span> Joe’s Break Room. All rights reserved.
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<script>
+  // ===== GET MAIN ELEMENTS =====
+  const searchInput = document.getElementById("cardSearch");
+  const productCards = Array.from(document.querySelectorAll(".product-card"));
+  const sortSelect = document.getElementById("sort");
+  const grid = document.querySelector(".shop-grid");
+  const filterPills = document.querySelectorAll(".tag-pill");
+
+  // Save original order for "Featured"
+  const originalOrder = productCards.slice();
+
+  // ===== COMBINED FILTER FUNCTION (search + pills) =====
+  function applyFilters() {
+    const query = searchInput.value.toLowerCase().trim();
+    const activePill = document.querySelector(".tag-pill.tag-active");
+    const filter = activePill ? activePill.dataset.filter : "all";
+
+    productCards.forEach(card => {
+      const name = (card.dataset.name || "").toLowerCase();
+      const tags = (card.dataset.tags || "").toLowerCase();
+      const category = (card.dataset.category || "").toLowerCase();
+      const price = Number(card.dataset.price || 0);
+
+      // Search match
+      const matchesSearch =
+        !query || name.includes(query) || tags.includes(query);
+
+      // Pill filter match
+      let matchesFilter = false;
+
+      switch (filter) {
+        case "all":
+          matchesFilter = true;
+          break;
+        case "pokemon":
+        case "sports":
+          matchesFilter = category === filter;
+          break;
+        case "charizard":
+          matchesFilter = tags.includes("charizard");
+          break;
+        case "under-200":
+          matchesFilter = price > 0 && price < 200;
+          break;
+        default:
+          matchesFilter = true;
+      }
+
+      // Show/hide card
+      if (matchesSearch && matchesFilter) {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+
+  // Search typing
+  if (searchInput) {
+    searchInput.addEventListener("input", applyFilters);
+  }
+
+  // ===== SORT BY PRICE =====
+  function sortCards() {
+    const value = sortSelect ? sortSelect.value : "featured";
+    let sorted = originalOrder.slice();
+
+    if (value === "price-low-high") {
+      sorted.sort((a, b) => Number(a.dataset.price) - Number(b.dataset.price));
+    } else if (value === "price-high-low") {
+      sorted.sort((a, b) => Number(b.dataset.price) - Number(a.dataset.price));
+    }
+    // for "featured" we keep originalOrder
+
+    // Re-attach cards in new order
+    sorted.forEach(card => {
+      grid.appendChild(card);
+    });
+  }
+
+  if (sortSelect) {
+    sortSelect.addEventListener("change", () => {
+      sortCards();
+      // After reordering, keep filters applied
+      applyFilters();
+    });
+  }
+
+  // ===== FILTER PILLS CLICK HANDLERS =====
+  filterPills.forEach(pill => {
+    pill.addEventListener("click", () => {
+      // toggle active class
+      filterPills.forEach(p => p.classList.remove("tag-active"));
+      pill.classList.add("tag-active");
+
+      // apply filters with new pill
+      applyFilters();
+    });
+  });
+
+  // Run once on load to be safe
+  applyFilters();
+</script>
+
+
+
 </body>
 </html>
