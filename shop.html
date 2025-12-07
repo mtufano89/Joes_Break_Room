@@ -15,18 +15,26 @@
 
   <!-- NAVBAR -->
   <header class="site-header">
-    <div class="nav-container">
-      <a href="index.html" class="brand-text">Joe’s Break Room</a>
+   <div class="nav-container">
+  <a href="index.html" class="brand-text">Joe’s Break Room</a>
 
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="shop.html" class="nav-link active">Shop</a>
-        <a href="#" class="nav-link">About</a>
-        <a href="#" class="nav-link">Contact</a>
-      </nav>
+  <nav class="nav-links" aria-label="Main navigation">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="shop.html" class="nav-link active">Shop</a>
+    <a href="#" class="nav-link">About</a>
+    <a href="#" class="nav-link">Contact</a>
+  </nav>
 
-      <a href="shop.html" class="nav-cta">Shop Now</a>
-    </div>
+  <div class="nav-actions">
+    <button class="nav-cart" aria-label="Open shopping cart">
+      <span class="cart-icon">🛒</span>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+
+    <a href="shop.html" class="nav-cta">Shop Now</a>
+  </div>
+</div>
+
   </header>
 
   <main>
@@ -79,10 +87,11 @@
 
     <!-- PRODUCT 1 -->
     <article class="product-card"
+    data-id="1"
       data-name="1999 Charizard PSA 10"
       data-tags="pokemon charizard base set holo fire psa 10"
       data-price="8500"
-      data-category="Pokémon">
+      data-category="Pokemon">
       <div class="product-image-wrap">
         <img src="images/charizard.jpg" alt="1999 Chariard PSA 10" />
       </div>
@@ -91,16 +100,17 @@
       <p class="product-meta">Base Set · Holo · Fire-type icon</p>
       <div class="product-bottom">
         <span class="product-price">$8,500</span>
-        <button class="product-btn">View details</button>
+        <button class="product-btn add-to-cart-btn">Add to cart</button>
       </div>
     </article>
 
     <!-- PRODUCT 2 -->
     <article class="product-card"
+    data-id="2"
       data-name="Pikachu Graded 9"
       data-tags="pokemon pikachu modern graded 9 electric"
       data-price="140"
-       data-category="Pokémon">
+       data-category="Pokemon">
       <div class="product-image-wrap">
         <img src="images/pikachu.jpg" alt="Pikachu graded 9" />
       </div>
@@ -109,12 +119,12 @@
       <p class="product-meta">Modern · Fan favorite · Electric</p>
       <div class="product-bottom">
         <span class="product-price">$140</span>
-        <button class="product-btn">View details</button>
-      </div>
+<button class="product-btn add-to-cart-btn">Add to cart</button>      </div>
     </article>
 
     <!-- PRODUCT 3 -->
     <article class="product-card"
+    data-id="3"
       data-name="Drake Maye Gem Mint"
       data-tags="sports football drake maye gem mint mosaic stained glass rookie"
       data-price="220"
@@ -127,16 +137,16 @@
       <p class="product-meta">Rookie QB · Mosaic Stained Glass</p>
       <div class="product-bottom">
         <span class="product-price">$220</span>
-        <button class="product-btn">View details</button>
-      </div>
+<button class="product-btn add-to-cart-btn">Add to cart</button>      </div>
     </article>
 
     <!-- PRODUCT 4 -->
     <article class="product-card"
+    data-id="4"
       data-name="Charizard PSA 9"
       data-tags="pokemon charizard vintage foil psa 9"
       data-price="3200"
-       data-category="Pokémon">
+       data-category="Pokemon">
       <div class="product-image-wrap">
         <img src="images/charizard.jpg" alt="Charizard PSA 9" />
       </div>
@@ -145,16 +155,16 @@
       <p class="product-meta">Vintage foil · Great centering</p>
       <div class="product-bottom">
         <span class="product-price">$3,200</span>
-        <button class="product-btn">View details</button>
-      </div>
+<button class="product-btn add-to-cart-btn">Add to cart</button>      </div>
     </article>
 
     <!-- PRODUCT 5 -->
     <article class="product-card"
+    data-id="5"
       data-name="Pikachu EX CGC 9.5"
       data-tags="pokemon pikachu ex cgc 9.5 full art lightning"
       data-price="95"
-       data-category="Pokémon">
+       data-category="Pokemon">
       <div class="product-image-wrap">
         <img src="images/pikachu.jpg" alt="Pikachu EX" />
       </div>
@@ -163,8 +173,7 @@
       <p class="product-meta">Full art · Lightning holo</p>
       <div class="product-bottom">
         <span class="product-price">$95</span>
-        <button class="product-btn">View details</button>
-      </div>
+<button class="product-btn add-to-cart-btn">Add to cart</button>      </div>
     </article>
 
     <!-- PRODUCT 6 -->
@@ -181,16 +190,16 @@
       <p class="product-meta">Prizm · Short print</p>
       <div class="product-bottom">
         <span class="product-price">$180</span>
-        <button class="product-btn">View details</button>
-      </div>
+<button class="product-btn add-to-cart-btn">Add to cart</button>      </div>
     </article>
 
     <!-- PRODUCT 7 -->
     <article class="product-card"
       data-name="Drake Maye Silver Rookie"
+      data-id="7"
       data-tags="sports football drake maye silver rookie prizm"
       data-price="180"
-       data-category="Pokémon">
+       data-category="Sports">
       <div class="product-image-wrap">
         <img src="images/drake_maye.jpg" alt="Drake Maye silver rookie" />
       </div>
@@ -199,16 +208,16 @@
       <p class="product-meta">Prizm · Short print</p>
       <div class="product-bottom">
         <span class="product-price">$180</span>
-        <button class="product-btn">View details</button>
-      </div>
+<button class="product-btn add-to-cart-btn">Add to cart</button>      </div>
     </article>
 
     <!-- PRODUCT 8 -->
     <article class="product-card"
       data-name="1999 Charizard PSA 10"
+      data-id="8"
       data-tags="pokemon charizard base set holo fire psa 10"
       data-price="8500"
-       data-category="Pokémon">
+       data-category="Pokemon">
       <div class="product-image-wrap">
         <img src="images/charizard.jpg" alt="1999 Charizard PSA 10" />
       </div>
@@ -217,16 +226,16 @@
       <p class="product-meta">Base Set · Holo · Fire-type icon</p>
       <div class="product-bottom">
         <span class="product-price">$8,500</span>
-        <button class="product-btn">View details</button>
-      </div>
+<button class="product-btn add-to-cart-btn">Add to cart</button>      </div>
     </article>
 
     <!-- PRODUCT 9 -->
     <article class="product-card"
       data-name="Pikachu Graded 9"
+      data-id="9"
       data-tags="pokemon pikachu modern graded 9 electric"
       data-price="140"
-       data-category="Pokémon">
+       data-category="Pokemon">
       <div class="product-image-wrap">
         <img src="images/pikachu.jpg" alt="Pikachu graded 9" />
       </div>
@@ -235,13 +244,13 @@
       <p class="product-meta">Modern · Fan favorite · Electric</p>
       <div class="product-bottom">
         <span class="product-price">$140</span>
-        <button class="product-btn">View details</button>
-      </div>
+<button class="product-btn add-to-cart-btn">Add to cart</button>      </div>
     </article>
 
     <!-- PRODUCT 10 -->
     <article class="product-card"
       data-name="Drake Maye Gem Mint"
+      data-id="10"
       data-tags="sports football drake maye gem mint mosaic stained glass rookie"
       data-price="220"
        data-category="Sports">
@@ -253,16 +262,16 @@
       <p class="product-meta">Rookie QB · Mosaic Stained Glass</p>
       <div class="product-bottom">
         <span class="product-price">$220</span>
-        <button class="product-btn">View details</button>
-      </div>
+<button class="product-btn add-to-cart-btn">Add to cart</button>      </div>
     </article>
 
     <!-- PRODUCT 11 -->
     <article class="product-card"
       data-name="Charizard PSA 9"
+      data-id="11"
       data-tags="pokemon charizard vintage foil psa 9"
       data-price="3200"
-       data-category="Pokémon">
+       data-category="Pokemon">
       <div class="product-image-wrap">
         <img src="images/charizard.jpg" alt="Charizard PSA 9" />
       </div>
@@ -271,16 +280,16 @@
       <p class="product-meta">Vintage foil · Great centering</p>
       <div class="product-bottom">
         <span class="product-price">$3,200</span>
-        <button class="product-btn">View details</button>
-      </div>
+<button class="product-btn add-to-cart-btn">Add to cart</button>      </div>
     </article>
 
     <!-- PRODUCT 12 -->
     <article class="product-card"
       data-name="Pikachu EX CGC 9.5"
+      data-id=""
       data-tags="pokemon pikachu ex cgc 9.5 full art lightning"
       data-price="95"
-       data-category="Pokémon">
+       data-category="Pokemon">
       <div class="product-image-wrap">
         <img src="images/pikachu.jpg" alt="Pikachu EX" />
       </div>
@@ -289,8 +298,7 @@
       <p class="product-meta">Full art · Lightning holo</p>
       <div class="product-bottom">
         <span class="product-price">$95</span>
-        <button class="product-btn">View details</button>
-      </div>
+<button class="product-btn add-to-cart-btn">Add to cart</button>      </div>
     </article>
 
   </div>
@@ -302,6 +310,31 @@
     © <span id="year"></span> Joe’s Break Room. All rights reserved.
   </footer>
 
+  <!-- CART DRAWER -->
+<div class="cart-overlay" id="cartOverlay">
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+
+  <div class="cart-panel">
+    <button class="cart-close" id="cartClose" aria-label="Close cart">×</button>
+    <h2 class="cart-title">Your cart</h2>
+
+    <div class="cart-items" id="cartItems">
+      <p class="cart-empty">Your cart is empty. Add some slabs!</p>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span class="cart-total-label">Total</span>
+        <span class="cart-total-value" id="cartTotal">$0</span>
+      </div>
+      <button class="cart-checkout-btn" id="cartCheckout">
+        Checkout via email
+      </button>
+    </div>
+  </div>
+</div>
+
+
 <script>
   // ===== GET MAIN ELEMENTS =====
   const searchInput = document.getElementById("cardSearch");
@@ -310,12 +343,11 @@
   const grid = document.querySelector(".shop-grid");
   const filterPills = document.querySelectorAll(".tag-pill");
 
-  // Save original order for "Featured"
-  const originalOrder = productCards.slice();
+  const originalOrder = productCards.slice(); // for "Featured"
 
-  // ===== COMBINED FILTER FUNCTION (search + pills) =====
+  // ===== FILTERS: SEARCH + PILLS =====
   function applyFilters() {
-    const query = searchInput.value.toLowerCase().trim();
+    const query = searchInput ? searchInput.value.toLowerCase().trim() : "";
     const activePill = document.querySelector(".tag-pill.tag-active");
     const filter = activePill ? activePill.dataset.filter : "all";
 
@@ -325,32 +357,43 @@
       const category = (card.dataset.category || "").toLowerCase();
       const price = Number(card.dataset.price || 0);
 
-      // Search match
+      // search match
       const matchesSearch =
         !query || name.includes(query) || tags.includes(query);
 
-      // Pill filter match
+      // pill match
       let matchesFilter = false;
 
       switch (filter) {
         case "all":
           matchesFilter = true;
           break;
-        case "pokemon":
-        case "sports":
-          matchesFilter = category === filter;
+
+        case "pokemon": {
+          const hasPokemonCategory =
+            category.includes("pokemon") || category.includes("pokémon");
+          const hasPokemonTag =
+            tags.includes("pokemon") || tags.includes("pokémon");
+          matchesFilter = hasPokemonCategory || hasPokemonTag;
           break;
+        }
+
+        case "sports":
+          matchesFilter = category.includes("sports") || tags.includes("sports");
+          break;
+
         case "charizard":
           matchesFilter = tags.includes("charizard");
           break;
+
         case "under-200":
           matchesFilter = price > 0 && price < 200;
           break;
+
         default:
           matchesFilter = true;
       }
 
-      // Show/hide card
       if (matchesSearch && matchesFilter) {
         card.style.display = "";
       } else {
@@ -359,7 +402,6 @@
     });
   }
 
-  // Search typing
   if (searchInput) {
     searchInput.addEventListener("input", applyFilters);
   }
@@ -374,9 +416,8 @@
     } else if (value === "price-high-low") {
       sorted.sort((a, b) => Number(b.dataset.price) - Number(a.dataset.price));
     }
-    // for "featured" we keep originalOrder
+    // "featured" keeps original order
 
-    // Re-attach cards in new order
     sorted.forEach(card => {
       grid.appendChild(card);
     });
@@ -385,26 +426,144 @@
   if (sortSelect) {
     sortSelect.addEventListener("change", () => {
       sortCards();
-      // After reordering, keep filters applied
       applyFilters();
     });
   }
 
-  // ===== FILTER PILLS CLICK HANDLERS =====
+  // ===== FILTER PILLS CLICK =====
   filterPills.forEach(pill => {
     pill.addEventListener("click", () => {
-      // toggle active class
       filterPills.forEach(p => p.classList.remove("tag-active"));
       pill.classList.add("tag-active");
-
-      // apply filters with new pill
       applyFilters();
     });
   });
 
-  // Run once on load to be safe
+  // Run once on load
   applyFilters();
+
+  // ===== CART LOGIC =====
+  const cartOverlay = document.getElementById("cartOverlay");
+  const cartBackdrop = document.getElementById("cartBackdrop");
+  const cartClose = document.getElementById("cartClose");
+  const cartItemsContainer = document.getElementById("cartItems");
+  const cartTotalEl = document.getElementById("cartTotal");
+  const cartCountEl = document.getElementById("cartCount");
+  const cartCheckoutBtn = document.getElementById("cartCheckout");
+  const navCartBtn = document.querySelector(".nav-cart");
+  const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
+
+  const cart = [];
+
+  function openCart() {
+    if (cartOverlay) {
+      cartOverlay.classList.add("open");
+    }
+  }
+
+  function closeCart() {
+    if (cartOverlay) {
+      cartOverlay.classList.remove("open");
+    }
+  }
+
+  function updateCartUI() {
+    // count + total
+    let total = 0;
+    let count = 0;
+
+    cart.forEach(item => {
+      total += item.price * item.qty;
+      count += item.qty;
+    });
+
+    if (cartCountEl) {
+      cartCountEl.textContent = count;
+    }
+
+    if (cartTotalEl) {
+      cartTotalEl.textContent = `$${total.toLocaleString()}`;
+    }
+
+    // items list
+    if (!cartItemsContainer) return;
+
+    if (cart.length === 0) {
+      cartItemsContainer.innerHTML =
+        '<p class="cart-empty">Your cart is empty. Add some slabs!</p>';
+      return;
+    }
+
+    cartItemsContainer.innerHTML = "";
+
+    cart.forEach(item => {
+      const row = document.createElement("div");
+      row.className = "cart-item";
+      row.innerHTML = `
+        <div>
+          <div class="cart-item-name">${item.name}</div>
+          <div class="cart-item-qty">Qty: ${item.qty}</div>
+        </div>
+        <div class="cart-item-price">$${item.price.toLocaleString()}</div>
+      `;
+      cartItemsContainer.appendChild(row);
+    });
+  }
+
+  function addToCart(card) {
+    if (!card) return;
+    const id = card.dataset.id;
+    const name = card.dataset.name;
+    const price = Number(card.dataset.price || 0);
+
+    const existing = cart.find(item => item.id === id);
+
+    if (existing) {
+      existing.qty += 1;
+    } else {
+      cart.push({ id, name, price, qty: 1 });
+    }
+
+    updateCartUI();
+  }
+
+  // Wire up "Add to cart" buttons
+  addToCartButtons.forEach(btn => {
+    btn.addEventListener("click", event => {
+      event.preventDefault();
+      const card = btn.closest(".product-card");
+      addToCart(card);
+      openCart();
+    });
+  });
+
+  // Cart open/close
+  if (navCartBtn) navCartBtn.addEventListener("click", openCart);
+  if (cartClose) cartClose.addEventListener("click", closeCart);
+  if (cartBackdrop) cartBackdrop.addEventListener("click", closeCart);
+
+  // Checkout via email
+  if (cartCheckoutBtn) {
+    cartCheckoutBtn.addEventListener("click", () => {
+      if (cart.length === 0) return;
+
+      const email = "joe@example.com"; // TODO: change to Joe's real email
+      const subject = encodeURIComponent("Joe's Break Room - Cart checkout");
+
+      const lines = cart.map(
+        item => `${item.qty} x ${item.name} ($${item.price.toLocaleString()})`
+      );
+      const bodyText =
+        "Hi Joe,%0D%0A%0D%0AI'd like to purchase the following cards:%0D%0A%0D%0A" +
+        lines.join("%0D%0A") +
+        "%0D%0A%0D%0AThanks!";
+
+      const mailtoLink = `mailto:${email}?subject=${subject}&body=${bodyText}`;
+      window.location.href = mailtoLink;
+    });
+  }
 </script>
+
 
 
 
