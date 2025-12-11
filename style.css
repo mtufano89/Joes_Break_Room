@@ -203,7 +203,7 @@ a {
   background: #ffffff;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
-  padding: 3.2rem 3rem;
+  padding: 2.8rem 2.6rem;
 
   display: flex;           /* left/right layout */
   gap: 3rem;
@@ -234,7 +234,7 @@ a {
   z-index: 1;
 }
 .hero-logo {
-  height: 300px;            /* bigger */
+  height: 260px;            /* bigger */
   width: auto;
   object-fit: contain;
   margin-bottom: 1.4rem;
@@ -260,7 +260,7 @@ a {
 .hero-subtitle {
   font-size: 0.98rem;
   color: var(--text-muted);
-  max-width: 430px;
+  max-width: 480px;
 }
 
 .hero-subtitle span {
@@ -303,7 +303,21 @@ a {
 .btn-link {
   font-size: 0.9rem;
   color: var(--accent-teal);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
 }
+
+.btn-link::after {
+  content: "→";
+  font-size: 0.9rem;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
 
 /* RIGHT SIDE */
 
@@ -359,6 +373,21 @@ a {
   color: var(--purple-deeper);
   margin-top: 0.2rem;
 }
+.showcase-section {
+  padding: 0 1.5rem 3.5rem;
+}
+
+.showcase-section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.showcase-heading {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 1.3rem;
+}
+
 
 /* ---------- HERO 90s BACKGROUND SHAPES (VISIBLE) ---------- */
 
